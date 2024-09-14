@@ -5,5 +5,5 @@ altura = float(input('Digite o valor da altura do retangulo: '))
 # Cálculo da área do retângulo 
 area = base * altura
 
-# Imrprimindo o resultado
+# Imprimindo o resultado
 print(f'A área do retângulo especificado é {area} u.m.!')
