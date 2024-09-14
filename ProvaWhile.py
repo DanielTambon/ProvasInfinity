@@ -10,13 +10,13 @@ tentativas = 0
 
 while tentativas < tentativas_maximas:
     # Solicita ao jogador que adivinhe o número
-    usuario_escolha = int(input("Adivinhe o número (entre 1 e 10): "))
+    usuario_escolha = int(input('Adivinhe o número (entre 1 e 10): '))
     tentativas += 1
     
     if usuario_escolha == numero_correto:
-        print("Parabéns! Você acertou o número!")
+        print('\033[32mParabéns! Você acertou o número!\033[m')
         # Encerra o loop se o número estiver correto
         break
 else:
     # Executado se o loop terminar sem o comando 'break'
-    print(f'Que pena! Você esgotou suas tentativas. O número correto era {numero_correto}! Mas não desista, tente novamente!')
+    print(f'\033[31mQue pena! Você esgotou suas tentativas. O número correto era {numero_correto}! Mas não desista, tente novamente!\033[m')
