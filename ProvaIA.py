@@ -36,5 +36,5 @@ Média = {lista_media[i]:.1f}''')
     print('\033[32mAPROVADO!\033[m' if lista_media[i] >= 7 else '\033[31mREPROVADO!\033[m')
     print('='*20)
 
-# Impressão da média da turma
-print(f'A média da turma foi {media_turma:.1f}')
+# Impressão da média da turma e caso for acima de 7 será verde e se for abaixo de 7 será vermelha
+print(f'\033[32mA média da turma foi {media_turma:.1f}\033[m' if lista_media[i] >= 7 else f'\033[31mA média da turma foi {media_turma:.1f}\033[m')
