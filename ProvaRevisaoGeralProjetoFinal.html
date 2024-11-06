@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Seu Nome">
+    <title>Portfólio Pessoal</title>
+    <style>
+        /* Resetando estilos padrões */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        header .perfil {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            border: 5px solid #fff;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        section#bio, section#habilidades, section#projetos {
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        section#contato {
+            background: #333;
+            color: white;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .habilidades-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .habilidade {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .projetos-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .projeto img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .social {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .social a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Media Queries para responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header .perfil {
+                width: 120px;
+                height: 120px;
+            }
+
+            .habilidades-lista, .projetos-lista {
+                grid-template-columns: 1fr;
+            }
+
+            form {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Olá, sou Daniel Tambon!</h1>
+            <p>Desenvolvedor Web | Designer | Criativo</p>
+            <img src="kirokaze.gif" alt="Imagem de Perfil" class="perfil">
+        </div>
+    </header>
+
+    <section id="bio">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p style="text-align: center;">Estudante de 19 anos de Engenharia Da Computação no 4ª semestre com ótimo
+            desempenho acadêmico e grande disposição para o aprendizado. Capaz de oferecer
+            um serviço de qualidade através de conhecimentos práticos e boas habilidades
+            interpessoais, visando o desenvolvimento profissional.</p>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="habilidades-lista">
+                <div class="habilidade">
+                    <h3>HTML & CSS</h3>
+                    <p>Construção de sites responsivos e bem estruturados.</p>
+                </div>
+                <div class="habilidade">
+                    <h3>JavaScript</h3>
+                    <p>Criação de interatividade e dinamicidade para páginas web.</p>
+                </div>
+                <div class="habilidade">
+                    <h3>React</h3>
+                    <p>Desenvolvimento de interfaces de usuário modernas e reativas.</p>
+                </div>
+                <div class="habilidade">
+                    <h3>Node.js</h3>
+                    <p>Desenvolvimento de backend e APIs eficientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div class="container">
+            <h2>Meus Projetos</h2>
+            <div class="projetos-lista">
+                <div class="projeto">
+                    <img src="projeto1.jpg" alt="Projeto 1">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição do projeto. Tecnologias usadas: HTML, CSS, JavaScript.</p>
+                </div>
+                <div class="projeto">
+                    <img src="projeto2.jpg" alt="Projeto 2">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição do projeto. Tecnologias usadas: React, Node.js.</p>
+                </div>
+                <div class="projeto">
+                    <img src="projeto3.jpg" alt="Projeto 3">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição do projeto. Tecnologias usadas: Vue.js, Firebase.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p style="text-align: center;">Fique à vontade para entrar em contato comigo para qualquer dúvida ou colaboração!</p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/daniel-tambon-462986302/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/DanielTambon" target="_blank">GitHub</a>
+                <a href="danieltambon74@gmail.com">E-mail</a>
+            </div>
+
+            <form action="#" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Daniel Tambon. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Exemplo de um script simples para manipular o envio do formulário com validação.
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Impede o envio do formulário para fins de demonstração
+            alert("Formulário enviado com sucesso!");
+        });
+    </script>
+</body>
+</html>
