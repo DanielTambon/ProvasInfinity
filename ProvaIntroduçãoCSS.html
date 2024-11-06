@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Harmonioso</title>
+    <style>
+        /* Cores da paleta */
+        :root {
+            --cor-primaria: #4A90E2; /* Azul Claro */
+            --cor-secundaria: #50E3C2; /* Verde Água */
+            --cor-destaque: #F5A623;  /* Laranja */
+            --cor-fundo: #F2F2F2;     /* Cinza Claro */
+            --cor-texto: #333333;     /* Preto Claro */
+        }
+
+        /* Estilos Globais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            color: var(--cor-texto);
+        }
+
+        h1, h2, h3 {
+            color: var(--cor-primaria);
+        }
+
+        a {
+            color: var(--cor-primaria);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--cor-destaque);
+        }
+
+        button {
+            background-color: var(--cor-secundaria);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: var(--cor-destaque);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Section */
+        section {
+            padding: 20px;
+        }
+
+        /* Aside */
+        aside {
+            background-color: var(--cor-secundaria);
+            padding: 15px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--cor-primaria);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Layout básico */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Bem-vindo ao Site Harmonioso</h1>
+    <p>Explore a beleza de um design simples e harmonioso.</p>
+</header>   
+
+<div class="container">
+    <section>
+        <h2>Conteúdo Principal</h2>
+        <p>Este é um site de exemplo com uma estrutura simples, usando cores harmoniosas.</p>
+        <button>Saiba Mais</button>
+    </section>
+
+    <aside>
+        <h3>Informações Adicionais</h3>
+        <p>Aqui você pode encontrar links úteis ou informações extras.</p>
+        <a href="#">Clique aqui para mais informações</a>
+    </aside>
+</div>
+
+<footer>
+    <p>&copy; 2024 Site Harmonioso | <a href="#">Política de Privacidade</a></p>
+</footer>
+</body>
+</html>
