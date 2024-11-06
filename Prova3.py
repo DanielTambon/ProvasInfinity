@@ -16,3 +16,5 @@ media = soma / len(lista)
 
 #Imprimindo os resultados da soma e da média
 print(f'\033[31mVocê digitou {len(lista)} números e a soma entre eles foi {soma}, enquanto a média aritimética entre eles deu {media:.2f}, com duas casas decimais.\033[m')
+
+#Imprimindo os números digitados
