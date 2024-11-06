@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Simples - Tema Dark</title>
+    <style>
+        /* Estilos Gerais - Tema Dark */
+        * {
+            box-sizing: border-box; /* Isso garante que o padding e a borda não ultrapassem a largura definida */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;  /* Cor de fundo escura */
+            color: #e0e0e0;  /* Texto claro */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #1e1e1e;  /* Fundo do formulário mais escuro */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra mais pronunciada */
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e0e0e0;  /* Cor do título */
+        }
+
+        label {
+            font-size: 14px;
+            color: #bbb;  /* Cor mais suave para o texto do rótulo */
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%;  /* Garante que os campos de entrada e botões ocupem toda a largura da div */
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #444;  /* Bordas escuras */
+            font-size: 16px;
+            background-color: #333;  /* Fundo escuro para os campos de entrada */
+            color: #e0e0e0;  /* Texto claro nos campos */
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        button:hover {
+            outline: none;
+            border-color: #4CAF50;  /* Cor de destaque quando o foco está nos campos */
+        }
+
+        /* Pseudo-elemento ::before para ícones */
+        input[type="text"]::before,
+        input[type="password"]::before {
+            content: "🔒";
+            padding-right: 10px;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            position: relative;
+            padding-left: 30px; /* Espaço para o ícone */
+        }
+
+        /* Pseudo-elemento ::after para efeito hover nos botões */
+        button::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #4CAF50;
+            transition: width 0.3s;
+        }
+
+        button:hover::after {
+            width: 100%;
+        }
+
+        /* Media Queries para responsividade */
+        @media (max-width: 600px) {
+            .form-container {
+                width: 100%;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            button {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .form-container {
+                width: 80%;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .form-container {
+                width: 40%;
+            }
+        }
+
+        /* Estilos de Botões */
+        button {
+            background-color: #4CAF50;  /* Cor de fundo do botão */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;  /* Cor de fundo ao passar o mouse */
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;  /* Cor do botão Limpar */
+        }
+
+        button[type="reset"]:hover {
+            background-color: #e53935;  /* Cor de fundo ao passar o mouse no botão Limpar */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulário de Login</h2>
+        <form action="#" method="POST">
+            <label for="username">Nome de Usuário</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </div>
+</body>
+</html>
