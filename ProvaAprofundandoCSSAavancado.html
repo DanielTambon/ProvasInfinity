@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Variáveis CSS</title>
+    <style>
+        /* Definindo variáveis CSS globais */
+        :root {
+            --font-size-heading: 24px;
+            --font-size-paragraph: 16px;
+            --spacing: 16px;
+        }
+
+        /* Estilo básico */
+        body {
+            font-family: Arial, sans-serif;
+            margin: var(--spacing);
+        }
+
+        h1, h2 {
+            font-size: var(--font-size-heading);
+            margin-bottom: var(--spacing);
+        }
+
+        p {
+            font-size: var(--font-size-paragraph);
+            margin-bottom: var(--spacing);
+        }
+
+        /* Ajustes para telas médias */
+        @media (min-width: 768px) {
+            :root {
+                --font-size-heading: 32px;
+                --font-size-paragraph: 18px;
+                --spacing: 24px;
+            }
+        }
+
+        /* Ajustes para telas grandes */
+        @media (min-width: 1024px) {
+            :root {
+                --font-size-heading: 40px;
+                --font-size-paragraph: 20px;
+                --spacing: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Cabeçalho</h1>
+    <h2>Subtítulo da Página</h2>
+    <p>Este é um exemplo de parágrafo. O tamanho da fonte e o espaçamento mudarão de acordo com o tamanho da tela.</p>
+    <p>Outro parágrafo para mostrar o espaçamento entre elementos.</p>
+</body>
+</html>
