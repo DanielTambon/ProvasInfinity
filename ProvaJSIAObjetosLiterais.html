@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Objeto Literal</title>
+</head>
+<body>
+  <h2>Exemplo de Objeto Literal em JavaScript</h2>
+  <p>Objeto literal explicação: A desestruturação de objetos em JavaScript permite extrair valores de propriedades diretamente em variáveis, usando as mesmas chaves do objeto.</p>
+  <pre id="saida"></pre>
+
+  <script>
+    // Objeto literal
+    const aluno = {
+      nome: "Daniel Tambon",
+      notas: [8, 7, 9],
+      calcularMedia() {
+        const soma = this.notas.reduce((total, nota) => total + nota, 0);
+        return soma / this.notas.length;
+      }
+    };
+
+    // Desestruturação
+    const { nome } = aluno;
+
+    // Spread operator para adicionar uma nova nota
+    const novasNotas = [...aluno.notas, 10];
+
+    // Exibindo os resultados
+    const saida = "
+    Nome do aluno: ${nome}
+    Notas originais: ${aluno.notas}
+    Novas notas (com spread): ${novasNotas}
+    Média das notas: ${aluno.calcularMedia()}
+    ";
+
+    document.getElementById("saida").textContent = saida;
+  </script>
+</body>
+</html>
