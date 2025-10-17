@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Programa em JavaScript que simula um sistema simples de notas escolares</title>
+</head>
+<body>
+  <h2>Programa em JavaScript que simula um sistema simples de notas escolares</h2>
+  <pre id="saida"></pre>
+
+  <script>
+    // Objeto literal
+    const aluno = {
+      nome: "Daniel Tambon",
+      idade: 20,
+      notas: [8, 7, 9],
+      calcularMedia() {
+        const soma = this.notas.reduce((total, nota) => total + nota, 0);
+        return soma / this.notas.length;
+      }
+    };
+
+    // Função que verifica a situação do aluno
+    function verificarSituacao(media) {
+      if (media >= 7) {
+        return "Aprovado ✅";
+      } else {
+        return "Reprovado ❌";
+      }
+    }
+
+    // Desestruturação
+    const { nome, idade } = aluno;
+
+    // Spread operator para adicionar uma nova nota
+    const novasNotas = [...aluno.notas, 10];
+
+    // Calculando a média
+    const media = aluno.calcularMedia();
+
+    // Verificando a situação
+    const situacao = verificarSituacao(media);
+
+    // Exibindo as notas no console com loop
+    console.log("Notas do aluno:");
+    for (const nota of aluno.notas) {
+      console.log(nota);
+    }
+
+    // Exibindo outras informações no console
+    console.log(`Nome: ${nome}`);
+    console.log(`Idade: ${idade}`);
+    console.log(`Média: ${media.toFixed(2)}`);
+    console.log(`Situação: ${situacao}`);
+
+    // Exibindo no corpo da página
+    const saida = `
+    Nome do aluno: ${nome}
+    Idade: ${idade}
+    Notas originais: ${aluno.notas}
+    Novas notas (com spread): ${novasNotas}
+    Média das notas: ${media.toFixed(2)}
+    Situação: ${situacao}
+    `;
+
+    document.getElementById("saida").textContent = saida;
+  </script>
+</body>
+</html>
